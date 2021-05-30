@@ -1,0 +1,12 @@
+
+.execom_img{
+  color: #020c81;
+}
+.execom_img{
+    display: block;
+    border-radius: 250px;
+    margin-bottom: 120px;
+    width:250px;
+    height:250px;
+    border: 5px solid #484fa0;
+}

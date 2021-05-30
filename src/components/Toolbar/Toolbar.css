@@ -135,6 +135,31 @@
 
 }
 
+.dropdown-menu-right {
+    visibility: hidden;
+  opacity: 0;
+    position: fixed;
+    left: auto;
+  transition: all 0.5s ease;
+
+  display: none;
+}
+
+.nav-item:hover {
+  cursor: pointer;
+}
+
+.nav-item:hover > .dropdown-menu-right,
+.dropdown-menu-right:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.dropdown-menu-right{
+ transition-duration: 0.5s;
+}
+
 
 
 @media(max-width: 900px){
@@ -152,14 +177,23 @@
         height: 56px;
         z-index:5;
         padding: 2px;
-
-
-
-
     }
     .active{
       background-color: white;
       text-decoration: underline;
       color: #01579b;
     }
+    
 }
+/*
+<li className="nav-item dropdown">
+                             <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" display='none'>
+                            Subjects
+                            </a>
+                            <div className="dropdown-menu dropdown-menu-right">
+                                <NavLink className="dropdown-item" to="/execom21" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Subject A</NavLink>
+                                <NavLink className="dropdown-item" to="/execom20" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Subject B</NavLink>
+
+                            </div>
+                        </li>
+*/

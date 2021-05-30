@@ -1,12 +1,14 @@
-import React from  'react';
+import React from 'react';
 import './Toolbar.css';
 import 'materialize-css/dist/css/materialize.min.css';
 import DrawerToggleButton from '../SideDrawer/DrawerToggleButton.js'
 import { NavLink } from "react-router-dom"
 
 
-const toolbar= props =>(
 
+
+
+const toolbar= props =>(
     <div style={{"marginBottom":"15em"}}>
      <div className="meta-nav" style={{"top": "0px", "position": "fixed", "zIndex": "5", "width": "100%"}}>
 	    	<p id="ieee-meta-a">
@@ -26,15 +28,25 @@ const toolbar= props =>(
     <header className="toolbar_a">
         <nav className="toolbar_navigation">
 
-            <div className="toolbar_logo"><a href="/"><img style={{"width": "200px", "paddingTop": "20px"}} className="responsive-img" src={require("../../assets/SB_logo.png")} alt="IEEE MEC SB LOGO" /></a></div>
-            <div className="hi"/>
-                <div className="toolbar_navigation_items">
-                    <ul>
-                        <li><NavLink to="/" exact activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Home   </NavLink></li>
-                        <li><NavLink to="/execom" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Execom</NavLink></li>
+                <div className="toolbar_logo"><a href="/"><img style={{"width": "200px", "paddingTop": "20px"}} className="responsive-img" src={require("../../assets/SB_logo.png")} alt="IEEE MEC SB LOGO" /></a></div>
+                <div className="hi"/>
+                    <div className="toolbar_navigation_items">
+                        <ul>
+                        <li><NavLink to="/" exact activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Home</NavLink></li>
+                        <li><NavLink to="/execom21" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Execom</NavLink></li>
+                        <li className="nav-item dropdown">
+                             <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" display='none'>
+                            Subjects
+                            </a>
+                            <div className="dropdown-menu dropdown-menu-right">
+                                <NavLink className="dropdown-item" to="/execom21" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Subject A</NavLink>
+                                <NavLink className="dropdown-item" to="/execom20" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Subject B</NavLink>
+
+                            </div>
+                        </li>
                         <li><NavLink to="/achievements" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Gallery</NavLink></li>
                         <li><NavLink to="/timeline" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Timeline</NavLink></li>
-                        <li><NavLink to="/events" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}} >Events</NavLink></li>
+                        <li><NavLink to="/events" activeStyle={{ borderBottom: "solid 3px #01579b", borderRight: "solid 3px #01579b", borderLeft: "solid 0.5px #01579b", borderTop: "solid 0.5px #01579b"}}>Events</NavLink></li>
                     </ul>
                 </div>
                 <div className="drawer_toggle">
@@ -47,6 +59,4 @@ const toolbar= props =>(
 );
 
 export default toolbar;
-/*
-activeStyle={{color:"white", borderRadius: "37px", background: "#01579b"}}
-*/
+

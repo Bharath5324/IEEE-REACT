@@ -2,7 +2,6 @@ import React , { Component } from 'react';
 import Toolbar from './components/Toolbar/Toolbar'
 import Landing from './components/Landing.js';
 import './App.css';
-import Execom from './components/Execom/Execom.js'
 // import Contacts from  './components/Contacts/Contacts.js'
 import Achievements from './components/Achievements/Achievements.js'
 import SideDrawer from './components/SideDrawer/SideDrawer.js'
@@ -11,6 +10,10 @@ import Footer from './components/Footer.js'
 import Timeline from './components/Timeline.js'
 import NotFound from './components/NotFoundPage/NotFoundPage.js'
 import EventHandler from './components/EventHandler/EventHandler.js'
+import Execom20 from './components/Execom/Execom2020.js'
+import Execom21 from './components/Execom/Execom2021.js'
+
+
 // import Fade from 'react-reveal/Fade';
 class App extends Component {
   state={
@@ -49,7 +52,9 @@ class App extends Component {
     <Switch>
         <Route exact path="/" component={Landing}/>
         <Route path="/events" component={EventHandler}/>
-        <Route path="/execom" component={Execom}/>
+        <Route path="/execom21" component={Execom21}/>
+        <Route path="/execom20" component={Execom20}/>
+         <Route path="/dropdown"/>
         <Route path="/achievements" component={Achievements}/>
         <Route path="/timeline" component={Timeline}/>
         <Route path="*" component={NotFound} />
